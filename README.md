@@ -11,8 +11,8 @@ Simple KEA Webshop example. It uses:
     - Globally: `npm install -g json-server`
     - Locally: `npm i json-server`
 2. Run JSON Server: 
-    - Windows: `json-server --watch data\users.json`
-    - Linux or Mac: `json-server --watch data/users.json`
+    - Windows: `json-server --watch data\users.json --host 127.0.0.1`
+    - Linux or Mac: `json-server --watch data/users.json --host 127.0.0.1`
 3. Update the `baseUrl` constant in `info.js` with JSON Server's URL (by default, http://localhost:3000)
 4. Open the application in a browser
 
