@@ -1,0 +1,7 @@
+{
+// This prevents LiveServer from forcing a page refresh when users.json changes, 
+// which results in prematurely closing modals automatically
+  "liveServer.settings.ignoreFiles": [
+    "**/users.json"
+  ]
+}

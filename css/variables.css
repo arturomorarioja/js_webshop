@@ -1,0 +1,10 @@
+:root {
+    --colourBorder: lightgray;
+    --colourLight: gray;
+    --colourTextSecondary: floralwhite;
+    --colourBGButton: #6699FF;
+    --colourWarning: red;
+
+    --iconDimension: 24px;
+    --imageWidth: 102px;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | EK Webshop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/products.js" type="module"></script>
+    <script src="js/cart.js" type="module"></script>
+    <script src="js/checkout.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <h1>EK Webshop</h1>
+        <nav class="utility">
+            <ul>
+                <li id="optLogout" class="hidden">
+                    <span id="userEmail"></span>
+                    <a href="index.html" title="Log out">Log out</a>
+                </li>
+                <li id="optLogin">
+                    <a href="login.html" title="Log in">Log in</a>
+                </li>
+                <li id="optSignup">
+                    <a href="signup.html" title="Sign up">Sign up</a>
+                </li>
+                <li id="optCart" class="hidden">
+                    <a href="#" title="Cart">Cart</a>
+                    <div id="itemsInCart" class="hidden"></div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>        
+    </main>
+    <dialog id="cart">            
+        <header>
+            <h2>Shopping cart</h2>
+            <div><button title="Close the cart">&times;</button></div>
+        </header>
+        <form>
+            <section></section>
+            <div class="submit">
+                <input type="submit" value="Check Out"></input>
+            </div>
+        </form>
+    </dialog>
+    <dialog id="checkout">
+        <header>
+            <h2>Check out</h2>
+            <div><button title="Close Check out">&times;</button></div>
+        </header>
+        <form>            
+            <section id="addresses">
+                <article id="delivery">
+                    <fieldset>
+                        <legend>Delivery address</legend>
+                        <div>
+                            <label for="txtDeliveryAddress">Address</label>
+                            <input type="text" id="txtDeliveryAddress" class="fullLine" required>
+                        </div>  
+                        <div>
+                            <label for="txtDeliveryPostalCode">Postal code</label>
+                            <input type="text" id="txtDeliveryPostalCode" pattern="[0-9]{3}[0-9]?" required>
+                            <label for="txtDeliveryCity">City</label>
+                            <input type="text" id="txtDeliveryCity" required>
+                        </div>
+                    </fieldset>
+                </article>
+                <article id="billing">
+                    <fieldset>
+                        <legend>Billing address</legend>
+                        <div>
+                            <input type="checkbox" id="chkRepeat">
+                            <label for="chkRepeat" class="long">Same as delivery address</label>
+                        </div>
+                        <div id="billingInfo">
+                            <div class="fullLine">
+                                <label for="txtBillingAddress">Address</label>
+                                <input type="text" id="txtBillingAddress" class="fullLine" required>
+                            </div>  
+                            <div>
+                                <label for="txtBillingPostalCode">Postal code</label>
+                                <input type="text" id="txtBillingPostalCode" pattern="[0-9]{3}[0-9]?" required>
+                                <label for="txtBillingCity">City</label>
+                                <input type="text" id="txtBillingCity" required>
+                            </div>
+                        </div>
+                    </fieldset>
+                </article>
+            </section>
+            <section id="payment">
+                <!-- This <article> has no semantic meaning. Its purpose is to prevent Water.css from misaligning the content -->
+                <article>
+                    <fieldset>
+                        <legend>Credit card</legend>
+                        <div>
+                            <label for="txtCreditCardName">Name on card</label>
+                            <input type="text" id="txtCreditCardName" class="fullLine" required>
+                        </div>
+                        <div>
+                            <label for="txtExpiryDate">Expiration</label>
+                            <input type="month" id="txtExpiryDate" required>
+                            <label for="txtCVV">CVV</label>
+                            <input type="text" id="txtCVV" pattern="[0-9]{3}" required>
+                        </div>
+                    </fieldset>
+                </article>
+            </section>
+            <div class="submit">
+                <input type="submit" value="Place Purchase"></input>
+            </div>
+        </form>
+    </dialog>
+    <dialog id="alert">
+        <header>
+            <h2>Information</h2>
+            <div><button title="Close Alert">&times;</button></div>
+        </header>
+        <section><p></p></section>
+    </dialog>
+    <footer>
+        <p>&copy; 2023-2025 Arturo Mora-Rioja</p>
+    </footer>
+</body>
+</html>

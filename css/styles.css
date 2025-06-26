@@ -1,0 +1,38 @@
+@import 'variables.css';
+
+body, h1, h2 {
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+body > footer {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+dialog {
+    header button {
+        padding: 0;
+        background-color: var(--background);
+        &:hover {
+            background-color: var(--background);
+        }
+    }
+    .submit {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;    
+    }
+}

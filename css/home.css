@@ -1,0 +1,125 @@
+@import 'styles.css';
+
+img {
+    width: var(--imageWidth);
+    margin: 1rem 0 0.5rem 2rem;
+    float: right;
+}
+
+article {
+    border-bottom: thin solid var(--colourBorder);
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+article > header {
+    flex-flow: column wrap;
+}
+article > header > p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--colourLight);
+}
+
+article > div {
+    display: flex;
+    flex-flow: row nowrap;
+}
+article > div:last-child {
+    clear: right;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+}
+nav li {
+    margin-left: 1rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+}
+#itemsInCart {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--colourWarning);
+}
+
+input[type=number] {
+    width: 2.5rem;
+    text-align: right;
+}
+td > input[type=number] {
+    padding: 0 0.5rem;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+table {
+    width: auto;
+}
+table > tr {
+    border-bottom: thin solid var(--colourBorder);
+}
+table button, table img {
+    width: var(--iconDimension);
+    height: var(--iconDimension);
+    margin: 0;
+    padding: 0;
+    background-color: var(--colourTextSecondary);
+}
+table img {
+    border: solid thin var(--colourBorder);
+    border-radius: 0.25rem;
+}
+td {
+    vertical-align: middle;
+}
+
+form div {
+    display: flex;
+    flex-flow: row wrap;
+}
+form label:not(.long) {
+    width: 7rem;
+    margin: 0 1rem 0 0.5rem;
+}
+.fullLine {
+    flex-grow: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+.price {
+    display: inline-block;
+    margin: 0 0 1rem 0;
+    padding: 0.25rem 1rem;
+    color: var(--colourTextSecondary);
+    background-color: var(--colourBGButton);
+    border-radius: 0.5rem;
+}
+.price:before, .priceCell:before {
+    content: '$';
+}
+
+#userEmail {
+    font-size: 0.8rem;
+    margin-right: 1rem;
+}
+
+.alignRight {
+    text-align: right;
+}
+
+form article {
+    border: none;
+    margin-bottom: 0;
+}
+fieldset {
+    margin-bottom: 0;
+}

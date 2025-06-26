@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in | EK Webshop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="css/auxiliar.css">
+    <script src="js/login.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <h1>EK Webshop</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html" target="_self" title="EK Webshop's catalog">Home</a> 
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <form id="frmLogin">
+            <div>
+                <label for="txtEmail">E-mail</label>
+                <input type="email" id="txtEmail" name="email" required>
+            </div>
+            <div>
+                <label for="txtPassword">Password</label>
+                <input type="password" id="txtPassword" name="password" required>
+            </div>
+            <div>
+                <input type="submit" value="Log in">
+            </div>
+        </form>
+        <section>
+            <p>Not a user yet? Please <a href="signup.html" target="_self" title="Sign up to the EK Webshop">sign up</a></p>
+        </section>
+    </main>
+    <dialog id="alert">
+        <header>
+            <h2>Information</h2>
+            <div><button title="Close Alert">&times;</button></div>
+        </header>
+        <section><p></p></section>
+    </dialog>
+    <footer>
+        <p>&copy; 2023-2025 Arturo Mora-Rioja</p>
+    </footer>
+</body>
+</html>
