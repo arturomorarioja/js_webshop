@@ -11,7 +11,9 @@ document.querySelector('#frmSignup').addEventListener('submit', async (e) => {
 
     const emailExists = (email) => {
         return getUser(email)
-        .then(data => data.length > 0);
+        .then(data => {
+            console.log(data);
+        });
     };
 
     const insertUser = (email, pwd) => {
@@ -28,10 +30,16 @@ document.querySelector('#frmSignup').addEventListener('submit', async (e) => {
                 newID = parseInt(data[data.length - 1].id) + 1;
             }
 
-            const params = new URLSearchParams();
-            params.append('id', String(newID));
-            params.append('email', email);
-            params.append('pwd', pwd);
+            // const params = new URLSearchParams();
+            // params.append('id', String(newID));
+            // params.append('email', email);
+            // params.append('pwd', pwd);
+
+            const params = {
+                id: String(newID),
+                email: email,
+                pwd: pwd
+            }
 
             // Insert the new user
 
@@ -39,9 +47,9 @@ document.querySelector('#frmSignup').addEventListener('submit', async (e) => {
                 method: 'POST',
                 mode: 'cors',
                 headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
+                    'Content-Type': 'application/json'
                 },
-                body: params
+                body: JSON.stringify(params)
             }).then(response => response.json())
             .catch((error) => { 
                 console.log(error); 
