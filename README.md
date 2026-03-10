@@ -14,7 +14,8 @@ Simple webshop example. It uses:
     - Windows: `json-server --watch data\users.json --host 127.0.0.1`
     - Linux or Mac: `json-server --watch data/users.json --host 127.0.0.1`
 3. Update the `baseUrl` constant in `info.js` with JSON Server's URL (by default, http://localhost:3000)
-4. Open the application in a browser
+4. Run the application in a web server (e.g., Apache, Nginx, Visual Studio Code's Live Server plugin)
+5. Open the application in a browser
 
 ## Tools
 JSON Server / JavaScript / Water.css / CSS3 / HTML5
